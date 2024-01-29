@@ -1,4 +1,8 @@
+# SPDX-License-Identifier: AGPL-3.0
+#
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
+# Maintainer: Pellegrino Prevete (tallero) <pellegrinoprevete@gmail.com>
+# Maintainer: Truocolo <truocolo@aol.com>
 
 pkgname=python-sphinxcontrib-towncrier
 pkgver=0.4.0a0
@@ -41,6 +45,15 @@ check() {
 
 package() {
   cd sphinxcontrib-towncrier-$pkgver
-  python -m installer -d "$pkgdir" dist/*.whl
-  install -Dm644 LICENSE -t "$pkgdir"/usr/share/licenses/$pkgname/
+  python \
+    -m installer \
+    --destdir="${pkgdir}" \
+    dist/*.whl
+  install \
+    -Dm644 \
+    LICENSE \
+    -t \
+    "$pkgdir"/usr/share/licenses/$pkgname/
 }
+
+# vim:set sw=2 sts=-1 et:
