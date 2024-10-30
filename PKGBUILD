@@ -3,6 +3,7 @@
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Maintainer: Pellegrino Prevete (tallero) <pellegrinoprevete@gmail.com>
 # Maintainer: Truocolo <truocolo@aol.com>
+# Maintainer: Antonio Rojas <arojas@archlinux.org>
 
 _os="$( \
   uname \
