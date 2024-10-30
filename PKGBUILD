@@ -52,12 +52,18 @@ makedepends=(
 checkdepends=(
   "${_py}-pytest-xdist"
 )
+_pypi="https://files.pythonhosted.org/packages/source"
 source=(
-  "${url}/archive/refs/tags/v${pkgver}.tar.gz"
+  # see below
+  # "${url}/archive/refs/tags/v${pkgver}.tar.gz"
+  "${_pypi}/${_pkg::1}/${_pkg}/${_pkg}-${pkgver}.tar.gz"
   0001-Update-build-system-dependencies.patch
 )
 sha512sums=(
-  'a828a541ca8a6a492c990de79ed97bfcc082b27f0ab91fd811632bdabcfc64261ee4a172d098e236bf6a36caa640bc252583337050e92f3833aaa97be0da3d4e'
+  # checksum below seems to have changed
+  # see ${url}/issues/95
+  # 'a828a541ca8a6a492c990de79ed97bfcc082b27f0ab91fd811632bdabcfc64261ee4a172d098e236bf6a36caa640bc252583337050e92f3833aaa97be0da3d4e'
+  'f534b8aeee2c94d980330ddeea81f93af6ebfbdeb178b26088e8f91425cad82b07916a0e95d8057a8775163c94e9d9be0279c8f3577afc0b52b974cd2f2d03f5'
   'e8c5f943e4ad8990a97a6aa8e493a1346cd9725a08c2b3e6ab0f3eb9371b9a63a55bad242060916f8a5ebfefe2a4c5c96b9a73291996fe3a4693c9b0920ca6b8'
 )
 
